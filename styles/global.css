@@ -463,7 +463,29 @@ img{
 }
 
 /*Hr Ends*/
-
+/*login start*/
+#pop_background_login{
+    position: fixed;
+    width: 100%;
+    height: 900px;
+    top: 0;
+    left:0;
+    background: #000000;
+    opacity: 0.8;
+    z-index: 1000;       
+}
+#login{
+    position: absolute;
+    background: #ffffff;
+    font-size: 0.9em;
+    width: 30%;
+    margin: 5% 0 0 30%;
+    padding: 10px;
+    opacity: 0.9;
+    z-index: 1500;
+    border-top: 5px solid #2980b9;
+    border-bottom: 10px solid #2980b9;  
+}
 /* mail popups*/
 #pop_background{
     position: fixed;
@@ -491,7 +513,7 @@ img{
     border-bottom: 10px solid #c0392b; 
 }
 
-input[type="text"], input[type="date"], input[type="number"], textarea  {
+input[type="text"], input[type="date"], input[type="number"], input[type="password"], textarea  {
     display: block;
     color: #555;
     outline: none;
@@ -505,7 +527,7 @@ input[type="text"], input[type="date"], input[type="number"], textarea  {
     
 	
 }
-input[type="submit"], input[type="file"], input[type="reset"]{
+input[type="submit"], input[type="file"]{
     background-color: #424242;
     outline: none;
     border: none;
@@ -515,7 +537,7 @@ input[type="submit"], input[type="file"], input[type="reset"]{
     margin-bottom: 0.8em;  
     color: white;
  }
-input[type="submit"]:hover , input[type="file"]:hover, input[type="reset"]:hover{
+input[type="submit"]:hover , input[type="file"]:hover{
     background-color: #333333;
     outline: none;
     border: none;
@@ -524,6 +546,9 @@ input[type="submit"]:hover , input[type="file"]:hover, input[type="reset"]:hover
     padding: 0.4em;
     margin-bottom: 0.8em;  
     color: white;
+}
+#Upload_error{
+    color: #c0392b;
 }
 .iframe1{
     width: 100%;
