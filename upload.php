@@ -1,7 +1,17 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles/global.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+</head>
+<div id="Upload_error">
 <?php
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
+$file_name=$_FILES['fileToUpload']['name'];
+$file_ext = substr($file_name, strripos($file_name, '.'));
+$newfile_name = $target_dir. $_POST["nic"];
+$newfile_name.=$file_ext;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 // Check if image file is a actual image or fake image
 if(isset($_POST["submit"])) {
@@ -35,10 +45,13 @@ if ($uploadOk == 0) {
     echo "<a>"."Sorry, your file was not uploaded.";
 // if everything is ok, try to upload file
 } else {
-    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+    if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $newfile_name)) {
         echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
     } else {
         echo "Sorry, there was an error uploading your file.";
     }
 }
 ?>
+</div>
+</body>
+</html>
