@@ -67,8 +67,9 @@
                 
         </div>
         <div id="pop_box_diet_calculate_1_Q5">
-                <input type="date" name="date" placeholder="date">
+                <input type="date" name="date" placeholder="date" required>
                 <input type="submit" value="Calculate" name = "submit">
+                <input type="reset" value="Reset" name = "reset">
                 </form>
                 
                 

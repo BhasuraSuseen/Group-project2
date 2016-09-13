@@ -5,6 +5,62 @@
 	<link rel="stylesheet" type="text/css" href="styles/global.css" />
 	<script src="parsley.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript">
+
+  function checkForm(form)
+  {
+    if(form.user_name.value == "") {
+      alert("Error: Username cannot be blank!");
+      form.user_name.focus();
+      return false;
+    }
+    re = /^\w+$/;
+    if(!re.test(form.user_name.value)) {
+      alert("Error: Username must contain only letters, numbers and underscores!");
+      form.user_name.focus();
+      return false;
+    }
+
+    if(form.password.value != "" && form.password.value == form.passwordc.value) {
+      if(form.password.value.length < 6) {
+        alert("Error: Password must contain at least six characters!");
+        form.password.focus();
+        return false;
+      }
+      if(form.password.value == form.user_name.value) {
+        alert("Error: Password must be different from Username!");
+        form.password.focus();
+        return false;
+      }
+      re = /[0-9]/;
+      if(!re.test(form.password.value)) {
+        alert("Error: password must contain at least one number (0-9)!");
+        form.password.focus();
+        return false;
+      }
+      re = /[a-z]/;
+      if(!re.test(form.password.value)) {
+        alert("Error: password must contain at least one lowercase letter (a-z)!");
+        form.password.focus();
+        return false;
+      }
+      re = /[A-Z]/;
+      if(!re.test(form.password.value)) {
+        alert("Error: password must contain at least one uppercase letter (A-Z)!");
+        form.password.focus();
+        return false;
+      }
+    } else {
+      alert("Error: Please check that you've entered and confirmed your password!");
+      form.password.focus();
+      return false;
+    }
+
+    alert(form.password.value + " was entered successfully");
+    return true;
+  }
+
+</script>
 </head>
 <body>
 <div id="header">
@@ -16,7 +72,7 @@
 </div>
 <div id="log">
 
- <form name="new_user" action="admin.php" method="post" accept-charset="utf-8" data-parsley-validate>
+ <form name="new_user" action="admin.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
 			<table>
 			<thead>
 			<tr>
@@ -29,7 +85,7 @@
 			<tr><td>Confirm Password</td><td> 
 			<input type="password" name="passwordc" size="20" required></td></tr>
 			<tr><td>NIC</td><td> 
-			<input type="number" name="nic" size="20" required></td></tr>
+			<input type="text" name="nic" size="20" required></td></tr>
 			<tr><td>User Type</td><td><input type="radio" name="usertype" value="1"> Administrator
   			<input type="radio" name="usertype" value="0" required=""> User</td></tr>
 			<tr><td colspan=2 align="center">
