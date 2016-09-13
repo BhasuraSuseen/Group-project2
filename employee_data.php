@@ -20,23 +20,23 @@
                 <iframe class="iframe1" name="iframe"></iframe>
                 
                 <form action="hr.php" method="post" target="iframehr">
-                    <input type="text" name="fname" placeholder="First Name">
-                    <input type="text" name="lname" placeholder="Last Name">
+                    <input type="text" name="fname" placeholder="First Name" required>
+                    <input type="text" name="lname" placeholder="Last Name" required>
                     Birth Date
-                    <input type="date" name="bdate" placeholder="Birth Date yyyy-mm-dd">
-                    <input type="text" name="address" placeholder="Address">
-                    <input type="int" name="cnumber" placeholder="Contact NO">
-                    <input type="text" name="gender" placeholder="Gender M/F">
-                    <input type="text" name="nic" placeholder="NIC NO ">
+                    <input type="date" name="bdate" placeholder="Birth Date yyyy-mm-dd" required>
+                    <input type="text" name="address" placeholder="Address" required>
+                    <input type="int" name="cnumber" placeholder="Contact NO" required>
+                    <input type="text" name="gender" placeholder="Gender M/F" required> 
+                    <input type="text" name="nic" placeholder="NIC NO " required>
                     
-                    <input type="text" name="etype" placeholder="Employee type">
+                    <input type="text" name="etype" placeholder="Employee type" required>
                     
              </div>
              <div id="pop_box_hr_data_record_right">
                     First Employment Date
-                    <input type="Date" name="fedate" placeholder="FE Date ">
+                    <input type="Date" name="fedate" placeholder="FE Date " required>
                     Employment Commencement Date
-                    <input type="Date" name="ecdate" placeholder="EC Date ">
+                    <input type="Date" name="ecdate" placeholder="EC Date " required>
                     Socond Grade Promotion Date
                     <input type="Date" name="sgpdate" placeholder="SGP Date ">
                     First Grade Promotion Date

@@ -11,8 +11,8 @@
 <h1>HOMS</h1>
 </div>
 <div id="icbar">
-<a href="login.php"><button class="button button2">Log Out</button></a>
-<a href="homs_home.php"><button class="button button2">Home</button></a>
+<a href="login.php"><button class="button">Log Out</button></a>
+<a href="homs_home.php"><button class="button">Home</button></a>
 </div>
 <div id="log">
 
@@ -33,8 +33,8 @@
 			<tr><td>User Type</td><td><input type="radio" name="usertype" value="1"> Administrator
   			<input type="radio" name="usertype" value="0" required=""> User</td></tr>
 			<tr><td colspan=2 align="center">
-			<input type="submit" value="Add new user" name="submit" class="button">
-			<input type="reset" value="Reset" class="button"></td>
+			<input type="submit" value="Add new user" name="submit">
+			<input type="reset" value="Reset"></td>
 			</tr></table>
 			</form>
 <?php
