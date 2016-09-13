@@ -27,21 +27,26 @@ Staff_L, Staff_D, DD_B, DD_L, DD_D)
 VALUES ('$date', '$s1', '$s2', '$s3', '$pb', '$pl'
 , '$pd', '$sb', '$sl', '$sd', '$db', '$dl', '$dd')";
 if (mysqli_query($conn, $sql)) {
-    echo "New record created successfully";
+    echo "New record created successfully <br/>";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-}
+
 
     $sql1 = "SELECT S1,S2,S3,Patients_B,Patients_L,Patients_D,Staff_B,Staff_L,Staff_D,DD_B,DD_L,DD_D FROM menu_1";
 	$result = mysqli_query($conn, $sql1);
     
-    $food=array("Milk","Eggs","Fish","Sprats","Bread","Butter","Sugar","Banana","Dhal","Cereal","");
-    if(isset($_POST["submit"])){  
+    $food=array("Milk","Eggs","Fish","Sprats","Bread","Butter","Sugar","Banana","Dhal","Cereal","Scraped Coconut","Rice","Carrot","Potato","Brinjol","Gotukola","Karawila","Cucuber","Beetroot","Beans");
+      
         if (mysqli_num_rows($result) > 0) {
+            $a=array();
         while($row = mysqli_fetch_array($result)){       
             $total = ($s1*$row[0])+($s2*$row[1])+($s3*$row[2])+($pb*$row[3])+($pl*$row[4])+($pd*$row[5])+($sb*$row[6])+($sl*$row[7])+($sd*$row[8])+($db*$row[9])+($dl*$row[10])+($dd*$row[11]);
-            echo $total;
+            array_push($a,$total);
+            }
+            foreach ($food as $key => $value){
+            echo "     {$food[$key]}".":- "."{$a[$key]} <br/>";
+            }
             //$egg = ($s1+$s2+$s3+$pb+$pl+$pd+$sb+$sl+$sd+$db+$d;+$dd)*$row[1];
             //$fish = ($s1+$s2+$s3+$pb+$pl+$pd+$sb+$sl+$sd+$db+$d;+$dd)*$row[2];
             //$sprats = ($s1+$s2+$s3+$pb+$pl+$pd+$sb+$sl+$sd+$db+$d;+$dd)*$row[3];
@@ -66,12 +71,12 @@ if (mysqli_query($conn, $sql)) {
              //echo "<a> Milk : ".$milk."</a>";
             
         }
-    }
+    
     else{
     echo "0 results";
         }
-}
 
+}
 
 mysqli_close($conn);
 ?>
