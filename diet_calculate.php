@@ -11,12 +11,12 @@
     <div id="pop_background"></div>
     <div id="pop_box_diet_calculate_1">
         <div id="pop_box_diet_calculate_1_Q1">
-            <form action="diet.php" method="post">
+            <form action="diet.php" method="post" target="iframe1">
                 <b>Children</b><br> 
                 Subtype Counts             
                 <input type="number" name="subtype_1_count" placeholder="Subtype 1 Count">             
                 <input type="number" name="subtype_2_count" placeholder="Subtype 2 Count">              
-                <input type="number" name="subtype_1_count" placeholder="Subtype 3 Count">
+                <input type="number" name="subtype_3_count" placeholder="Subtype 3 Count">
                 <b>Staff</b><br>
                 Staff count
                 <input type="number" name="subtype_1_sbreakfast" placeholder="Breakfast Count">
@@ -67,8 +67,8 @@
                 
         </div>
         <div id="pop_box_diet_calculate_1_Q5">
+                <input type="date" name="date" placeholder="date">
                 <input type="submit" value="Calculate" name = "submit">
-                <input type="reset" value="Reset" name = "reset">
                 </form>
                 
                 
@@ -152,7 +152,9 @@
             </div>
             <div class="column_right" >
                 <div class="right_up_food_ammount"> 
-                    <a  href="#" >Show calculated food amounts </a>                  
+                    <a  href="#" >Show calculated food amounts </a>
+                    <iframe class="iframe1" name="iframe1"></iframe> 
+                                
                 </div>
 
                 <div class="right_down_foof_pdf">
