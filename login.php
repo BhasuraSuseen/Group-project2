@@ -38,7 +38,7 @@
             $_SESSION['username']=$username;
             if($count[1]==0 ){
                
-                header("Location: home.php");
+                header("Location: homs_home.php");
 		          die();
 	      
             }elseif($count[1]==1){
