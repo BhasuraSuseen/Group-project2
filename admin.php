@@ -123,9 +123,9 @@ if (mysqli_num_rows($result) > 0) {
  if(isset($_POST["submit"])){
  	 $user = $_POST['user_name'];
  	 $id = $_POST['nic'];
- 	 $pass = $_POST['password'];
+ 	 $pass = md5($_POST['password']);
  	 $admin = $_POST['usertype'];
- 	 $passc = $_POST['passwordc'];
+ 	 $passc = md5($_POST['passwordc']);
  	 if ($pass == $passc){
  	 /*checking if the user name is taken */
   $usernamecheck="select * from users where USERNAME='$user'";
