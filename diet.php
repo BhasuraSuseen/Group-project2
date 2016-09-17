@@ -5,9 +5,7 @@
 </head>
 <body>
 <?php
-
 require "connect.php";
-
 if(isset($_POST["submit"])){
     $date =$_POST["date"];
     $s1=$_POST["subtype_1_count"];
@@ -31,8 +29,6 @@ if (mysqli_query($conn, $sql)) {
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }
-
-
     $sql1 = "SELECT S1,S2,S3,Patients_B,Patients_L,Patients_D,Staff_B,Staff_L,Staff_D,DD_B,DD_L,DD_D FROM menu_1";
 	$result = mysqli_query($conn, $sql1);
     
@@ -67,7 +63,6 @@ if (mysqli_query($conn, $sql)) {
             //$beet = ($s1+$s2+$s3+$pb+$pl+$pd+$sb+$sl+$sd+$db+$d;+$dd)*$row[18];
             //$beans = ($s1+$s2+$s3+$pb+$pl+$pd+$sb+$sl+$sd+$db+$d;+$dd)*$row[19];
              //echo "<a> result : ".$result."</a><br>";
-
              //echo "<a> Milk : ".$milk."</a>";
             
         }
@@ -75,9 +70,7 @@ if (mysqli_query($conn, $sql)) {
     else{
     echo "0 results";
         }
-
 }
-
 mysqli_close($conn);
 ?>
 </body>

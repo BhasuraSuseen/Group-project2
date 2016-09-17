@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 	<title>Admin</title>
@@ -6,7 +5,6 @@
 	<script src="parsley.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script type="text/javascript">
-
   function checkForm(form)
   {
     if(form.user_name.value == "") {
@@ -20,7 +18,6 @@
       form.user_name.focus();
       return false;
     }
-
     if(form.password.value != "" && form.password.value == form.passwordc.value) {
       if(form.password.value.length < 6) {
         alert("Error: Password must contain at least six characters!");
@@ -55,21 +52,27 @@
       form.password.focus();
       return false;
     }
-
     alert(form.password.value + " was entered successfully");
     return true;
   }
-
 </script>
 </head>
 <body>
 <div id="header">
-<h1>HOMS</h1>
-</div>
-<div id="icbar">
-<a href="login.php"><button class="button">Log Out</button></a>
-<a href="homs_home.php"><button class="button">Home</button></a>
-</div>
+        <div class="logo"><a href="homs_home.php"><span1>#</span1><span2>OMS</span2>    panadura base hospital</a></div>
+        <div class="user_name">
+            <div id="icbar">
+				<a href="login.php"><button class="button">Log Out</button></a>
+					<a href="homs_home.php"><button class="button">Home</button></a>
+			</div>
+        </div>
+        <div class="menu_icons">
+         
+          
+          
+        </div>
+    </div>
+
 <div id="log">
 
  <form name="new_user" action="admin.php" method="post" accept-charset="utf-8" onsubmit="return checkForm(this);">
@@ -95,15 +98,11 @@
 			</form>
 <?php
 require "connect.php";
-
  session_start(); 
  
 echo "Welcome ". $_SESSION['username'];
-
 $sql = "SELECT USERNAME,ADMIN,NIC_NO FROM users WHERE USERNAME!='".$_SESSION['username']."'";
-
 $result = mysqli_query($conn, $sql);
-
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
 	echo "<table width=100%><tr><th>User Name</th>
@@ -117,13 +116,12 @@ if (mysqli_num_rows($result) > 0) {
 		
 	
 	}
-
 }
  echo"</table>";
  if(isset($_POST["submit"])){
  	 $user = $_POST['user_name'];
- 	 $id = $_POST['nic'];
- 	 $pass = md5($_POST['password']);
+ 	 $id = $_POST['nic'];	 
+	 $pass = md5($_POST['password']);
  	 $admin = $_POST['usertype'];
  	 $passc = md5($_POST['passwordc']);
  	 if ($pass == $passc){
@@ -157,7 +155,6 @@ if(mysqli_num_rows($result1)>=1){
 }
 else{echo "passwords do not match";}
 }
-
 mysqli_close($conn);
 ?>
 </div>

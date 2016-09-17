@@ -11,7 +11,7 @@
     <div id="pop_background"></div>
     <div id="pop_box_diet_calculate_1">
         <div id="pop_box_diet_calculate_1_Q1">
-            <form action="diet.php" method="post" target="iframe1">
+            <form action="diet.php" method="post" target="iframe2">
                 <b>Children</b><br> 
                 Subtype Counts             
                 <input type="number" name="subtype_1_count" placeholder="Subtype 1 Count">             
@@ -69,7 +69,6 @@
         <div id="pop_box_diet_calculate_1_Q5">
                 <input type="date" name="date" placeholder="date" required>
                 <input type="submit" value="Calculate" name = "submit">
-                <input type="reset" value="Reset" name = "reset">
                 </form>
                 
                 
@@ -116,6 +115,7 @@
         <div class="logo"><a href="homs_home.php"><span1>#</span1><span2>OMS</span2>    panadura base hospital</a></div>
         <div class="user_name">
             <a href='#' class="user_name">Bhasura Suseen </a>
+           
         </div>
         <div class="menu_icons">
          
@@ -143,7 +143,7 @@
         <div class="content">
             <div class="column_middle">
                 <div class="food_menu_details">
-                    
+                    <img src="/images/menu_we.jpg" alt="Monday Diet Menu">
                 </div>
                 <div class="food_menu_buttons">
                     <a  href="#" id="open_diet_2"> Update food menus </a><a> ... </a> 
@@ -154,7 +154,7 @@
             <div class="column_right" >
                 <div class="right_up_food_ammount"> 
                     <a  href="#" >Show calculated food amounts </a>
-                    <iframe class="iframe1" name="iframe1"></iframe> 
+                    <iframe class="iframe2" name="iframe2"></iframe> 
                                 
                 </div>
 

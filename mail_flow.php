@@ -18,26 +18,26 @@
 <body>
     <div id="pop_background"></div>
     <div id="pop_box_mail_1">
-        <form action="mail.php"  method="post" >
+        <form action="mail.php"  method="post" target="iframem">
             <p>Recieved Date</p>
             <input type="Date" name="Recieved_date" placeholder="Recieved date">
-            <input type="submit" name = "submi">
+            <input type="submit" name = "submi1">
         </form>
     </div>
     <div id="pop_box_mail_2">
-            <form action="mail.php" method="post">
+            <form action="mail.php" method="post" target="iframem">
                 <p>Recieved Date to AO</p>
                 <input type="Date" name="Date_to_AO" placeholder="Recieved date to AO">
                 <p>Subject</p>
                 <input type="text" name="Subject" placeholder="Subject">           
                 <p>Forward to</p>
                 <input type="text" name="Forward_to" placeholder="Forward to">           
-                <input type="submit" name = "submi">
+                <input type="submit" name = "submi2">
             </form>
     </div>
     <div id="pop_box_mail_3">
         
-        <form action="mail.php" method="post">
+        <form action="mail.php" method="post" target="iframem">
             <p>Recieved Date to EB</p>
             <input type="Date" name="Date_to_EB" placeholder="Recieved date to EB"> 
             <p>Sender</p>
@@ -45,10 +45,10 @@
             <p>Recipient</p>
             <input type="text" name="Recipient" placeholder="Recipient">          
             <p>Forward</p><input type="checkbox" name="Forward" placeholder="Forward or not">
-            <input type="submit" name = "submi">
+            <input type="submit" name = "submi3">
 	    </form>
         
-        <form action="upload.php" method="post" enctype="multipart/form-data" target="iframe">
+        <form action="upload1.php" method="post" enctype="multipart/form-data" target="iframe">
             Select image to upload:
             <input type="file" name="fileToUpload" id="fileToUpload">
             <input type="submit" value="Upload Image" name="submit">
@@ -144,18 +144,14 @@
                 </div>
                 <div class= "mail_flow_details">
                      <a  href="#" target="_self"><p>Mail flow details</p></a>
+                     <iframe class="iframem" name="iframem"></iframe>  
                 </div>                 
             </div>
             <div class="column_right" >
-                <div class="right_up"> 
-                                  
+                <div class="right_mail"> 
+                     <image src="images/letter-writing.jpg" alt="Letter" >           
                 </div>
-                <div class="right_up_right">
-                    
-                </div> 
-                <div class="right_down">
-                    
-                </div>
+                
                 
             </div>
         </div>               

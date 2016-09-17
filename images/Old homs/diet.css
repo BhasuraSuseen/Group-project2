@@ -1,0 +1,52 @@
+
+
+html, body, section, div {
+  height: 100%;
+}
+#header {
+    background-color:#9e9e9e;
+    color:white;
+    text-align:center;
+    padding:3px;
+    font-family:Arial;
+	height: 12%;
+}
+#icbar {
+    height:30px;
+    background-color:#bdbdbd;
+    color:white;
+    padding:5px;
+    font-family:Arial;
+    
+}
+body { 
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-align: center;
+  text-shadow: 0 2px 2px #b6701e;
+}
+
+section {
+  width: 100%;
+}
+
+
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem 0;
+}
+
+/* Pattern styles */
+.left-half {
+  background-color: #3FC380;
+  float: left;
+  width: 50%;
+}
+.right-half {
+  background-color: #03A678;
+  float: left;
+  width: 50%;
+}

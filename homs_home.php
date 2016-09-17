@@ -49,24 +49,42 @@
         <div class="content">
             <div class="column_middle">
                 <div class="news_feed">
-                    <p>News feed <br> Noticess and activities <br> Urgent messages</p>
+                    <div class="news_feed_left"><a href="#">NEWS FEED</a></div>
+                    <div class="news_feed_right"><button type="button" onclick="alert('Creates Message !')">Add Message</button></div>
+                    <ul id="nf">        
+                    <li><a href="#" class="ns">Staff Meeting Today 2.00 pm<br>Ao officer 8.35 am</a></li>
+                    <li><a href="#" class="ns">Please Forward the mail to Dr Janaka imedietly  <br>EB officer 9.12 am</a></li>
+                    <li><a href="#" class="ns">Mrs. Jayathilaka Meet me before 11.30 am <br>EB officer 10.22 am</a></li>
+                    <li><a href="#" class="ns">Please reply to the mail no 3008 <br>AO officer 11.22 am</a></li>
+                    <li><a href="#" class="ns">I have a meeting at 1.00 pm <br>AO officer 11.34 am</a></li>
+                    </ul>
+                    
                 </div>
                 <div class="hr_container">
+                    
                     <div class="hr_logo">
                         <a href="#"><spanh>HR</spanh></a>                       
                      </div>
-                     <a  href="#" target="_self"><p>Attendence 32<br>Leave 5<br>Absent 2</p></a>
-                     
+                     <div class="hr_container_inside">
+                        <a  href="#" target="_self"><p>Attendence 32<br>Leave 5<br>Absent 2</p></a>
+                     </div>
                 </div>
                 <div class= "mail_container">
                     <div class="mail_logo">                       
                         <a href="#"><spanm> MAIL</spanm></a>
                     </div>
+                    <div class="mail_container_inside">
+                        <a  href="#" target="_self"><p>2 new mails arrived<br>M 3002<br>M 3003</p></a>
+                     </div>
                 </div>
                 <div class= "diet_container">
                     <div class="diet_logo">
                         <a href="#"><spand> DIET SHEET</spand></a>
                     </div>
+                    <div class="diet_container_inside">
+                        <a  href="#" target="_self"><p>Counts entered<br>for today<br>...<br>Reports<br>are created<br>for pevious<br>week</p></a>
+                     </div>
+                    
                 </div> 
             </div>
             <div class="column_right" >
@@ -200,10 +218,33 @@
                 
                 </div>
                 <div class="right_up_right">
-                    
+                    <b>EVENTS</b><br><br>
+                    <a> Collect Mails from post office <br>
+                    at 10.20 am<br>
+                    ...<br>
+                    <a> Store Inspection <br>
+                    at 2.00 pm<br>
+                    ...<br>
+                    Mail disposal  <br>
+                    at 4.00 pm<br>
+                    ...<br>
                 </div> 
-                <div class="right_down">
+                
+                <div class="right_down_container">
+                    <div class="right_down_back"></div>
+                    <div class="right_down">
+                    <b>HOPITAL DETAILS</b><br><br>
+                    <a> Address: Base Hospital, Panadura <br>
                     
+                    ...<br>
+                     Tel<br>+94 (0) 38 2544444-7<br>
+                        +94 (0) 38 2304444-56<br>
+                        +94 (0) 38 55 77 111<br>
+                        +94 (0) 38 5 77 77 77<br>
+                        Fax	+94 (0) 38 2430393 <br> 
+                    ...<br>
+                     </a>
+                </div>
                 </div>
                 
             </div>
